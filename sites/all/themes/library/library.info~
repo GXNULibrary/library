@@ -1,6 +1,6 @@
 
-name = Bartik
-description = A flexible, recolorable theme with many regions.
+name = Library
+description = 广西师范大学图书馆主题
 package = Core
 version = VERSION
 core = 7.x
@@ -35,7 +35,7 @@ settings[shortcut_module_link] = 0
 
 
 ; Information added by Drupal.org packaging script on 2014-01-03
-version = "7.25"
+version = "7.26"
 project = "drupal"
 datestamp = "1388709506"
 
