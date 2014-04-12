@@ -10,6 +10,17 @@ stylesheets[all][] = css/bootstrap-theme.css
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
+scripts[all][] = js/jquery-1.11.0.js
+scripts[all][] = js/jquery-ui-1.10.4.custom.js
+scripts[all][] = js/bootstrap.js
+scripts[all][] = js/bootstrap-select.js
+scripts[all][] = js/bootstrap-paginator.js
+scripts[all][] = js/bootstrap-switch.js
+scripts[all][] = js/bootstrap-typeahead.js
+scripts[all][] = js/jquery.placeholder.js
+scripts[all][] = js/jquery.stacktable.js
+scripts[all][] = js/respond.min.js
+
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
