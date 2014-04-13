@@ -7,6 +7,13 @@ drupal_theme_rebuild();
 db_query("DELETE FROM {cache};");
 
 /**
+ * Alternate HTML head meta tags.
+ */
+function library_html_head_alter(&$head_elements) {
+  dpm($head_elements);
+}
+
+/**
  * Add body classes if certain regions have content.
  */
 function library_preprocess_html(&$variables) {
