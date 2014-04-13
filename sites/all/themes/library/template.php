@@ -7,10 +7,44 @@ drupal_theme_rebuild();
 db_query("DELETE FROM {cache};");
 
 /**
- * Alternate HTML head meta tags.
+ * Alter HTML head meta tags.
  */
 function library_html_head_alter(&$head_elements) {
   dpm($head_elements);
+
+  unset($head_elements['system_meta_content_type']);
+  unset($head_elements['system_meta_generator']);
+  foreach ($head_elements as $key => $element) {
+    if (isset($element['#attributes']['rel']) && $element['#attributes']['rel'] == 'shortcut icon') {
+      $head_elements[$key]['#attributes']['href'] = url('images/favicon.ico', array('absolute' => TRUE));
+    }
+  }
+
+  $head_elements['meta_charset'] = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'charset' => 'utf-8'
+    ),
+  );
+
+  $head_elements['meta_IE8_compatible'] = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'X-UA-Compatible',
+      'content' => 'IE=edge',
+    ),
+  );
+
+  $head_elements['meta_viewport'] = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1.0',
+    ),
+  );
 }
 
 /**
