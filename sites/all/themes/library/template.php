@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Clear theme cache immediately.
+ */
+drupal_theme_rebuild();
+db_query("DELETE FROM {cache};");
+
+/**
  * Add body classes if certain regions have content.
  */
 function library_preprocess_html(&$variables) {
