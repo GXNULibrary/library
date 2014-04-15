@@ -10,15 +10,9 @@ db_query("DELETE FROM {cache};");
  * Alter HTML head meta tags.
  */
 function library_html_head_alter(&$head_elements) {
-  dpm($head_elements);
 
   unset($head_elements['system_meta_content_type']);
   unset($head_elements['system_meta_generator']);
-  foreach ($head_elements as $key => $element) {
-    if (isset($element['#attributes']['rel']) && $element['#attributes']['rel'] == 'shortcut icon') {
-      $head_elements[$key]['#attributes']['href'] = url('images/favicon.ico', array('absolute' => TRUE));
-    }
-  }
 
   $head_elements['meta_charset'] = array(
     '#type' => 'html_tag',
