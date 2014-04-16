@@ -42,6 +42,14 @@ regions[footer_thirdcolumn] = Footer third column
 regions[footer_fourthcolumn] = Footer fourth column
 regions[footer] = Footer
 
+regions[search_box] = Search box
+regions[slideshow] = Slide show
+regions[service] = Service
+regions[resource] = Resource
+regions[guide] = Guide
+regions[communication] = Communication
+regions[friendly_links] = Friendly links
+
 settings[shortcut_module_link] = 0
 
 
